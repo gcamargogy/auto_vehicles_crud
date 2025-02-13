@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Source Sans 3", serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* overflow: hidden; */
+}
+
+.index-container {
+    background-color: white;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.219);
+
+    width: 30%;
+    height: 95%;
+}
+
+.index-imagem {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../imgs/backgroundMelhor.svg");
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+.formulario-container {
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.formulario-container h1 {
+    /* margin-top: 5%; */
+    font-size: 26px;
+    position: relative;
+    top: 10px;
+    font-weight: bold;
+}
+
+.formulario {
+    width: 100%;
+    /* height: 85%; */
+    /* background-color: blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.formulario label {
+    font-size: 16px;
+    width: 79%;
+}
+
+.formulario input {
+    width: 80%;
+    height: 40px;
+    padding-left: 10px;
+    outline: none;
+    border: 2px solid rgba(0, 0, 0, 0.575);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: transform .1s ease-in;
+}
+
+.formulario:has(input[type=text]:focus) label:not(:has(+ input[type=text]:focus)),
+.formulario:has(input[type=text]:focus) input[type=text]:not(:focus) {
+    opacity: 0.3; /* Apaga os labels e inputs que não estão focados */
+    transform: scale(0.95); /* Opcional: diminui um pouco os outros */
+    transition: all 0.3s ease;
+}
+
+
+.formulario input:focus {
+    border: none;
+    border-radius: 0px;
+    /* width: 82%; */
+    transform: scale(1.04);
+    background-color: rgb(195, 223, 255);
+    color: black;
+}
+
+.formulario .botao-cadastrar {
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 50px 0px 50px 0px;
+    background-color: white;
+    cursor: pointer;
+    transition: all .3s ease;
+    font-size: 1rem;
+    width: 50%;
+}
+
+.formulario .botao-cadastrar:hover {
+    background-color: rgb(117, 181, 255);
+    border: none;
+    transform: scale(100%);
+    border-radius: 0px;
+}
+
+.botao-sair {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+}
+
+.botao-sair button {
+    border-radius: 100px;
+    border: none;
+    width: 50px;
+    height: 50px;
+    font-size: 32px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.botao-sair button:hover {
+    transform: rotate(-360deg);
+}

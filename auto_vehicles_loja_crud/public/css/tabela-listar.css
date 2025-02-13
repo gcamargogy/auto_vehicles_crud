@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Source Sans 3", serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f2f2;
+}
+
+.index-container {
+    background-color: white;
+    box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.1);
+    width: 85%;
+    max-height: 100%;
+    overflow: auto;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.index-imagem {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../imgs/backgroundMelhor.svg");
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+.listar-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.listar-container h1 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+    font-weight: 700;
+    font-family: "Source Sans 3", sans-serif;
+    letter-spacing: 1px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    table-layout: fixed;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table th {
+    background-color: #4E92F2;
+    color: #fff;
+    text-align: center;
+    padding: 12px 15px;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.table td {
+    background-color: #ffffff;
+    color: #000000;
+    text-align: center;
+    padding: 12px 15px;
+    border-bottom: 1px solid #cccccc;
+}
+
+.table-container {
+    width: 100%;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.btn {
+    width: 80px;
+    height: 35px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    margin-bottom: 5%;
+    font-size: 14px;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    /* transition: all 0.1s ease; */
+}
+
+.btn-edit {
+    background-color: #4CAF50;
+}
+
+.btn-edit:hover {
+    background-color: #45a04900;
+    border: 2px solid black;
+    color: black;
+}
+
+.btn-delete {
+    background-color: #f44336;
+}
+
+.btn-delete:hover {
+    background-color: #e5383500;
+    border: 2px solid black;
+    color: black;
+}
+
+.botao-sair {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+}
+
+.botao-sair button {
+    border-radius: 100px;
+    border: none;
+    width: 50px;
+    height: 50px;
+    font-size: 32px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.botao-sair button:hover {
+    transform: rotate(-360deg);
+}
